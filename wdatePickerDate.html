@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>material</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/fontawesome/font-awesome.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/dataTables/dataTables.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/style.css" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    	<div class="collapse navbar-collapse"  id="navbar-collapse"></div>
+    	<div class="main-panle">
+    		<nav class="navbar navbar-transparent navbar-absolute">
+    			<div class="container-fluid">
+    				<div class="navbar-header">
+						<button class="navbar-toggle" type="button" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">时间插件</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<form class="navbar-from navbar-right">
+			  				<div class="form-group is-empty">
+			  					<input type="text" class="form-control" placeholder="Search">
+				   				<span class="material-input"></span>
+								<span class="material-input"></span>
+			  				</div>
+							<button type="button" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i>
+							</button>
+			  			</form>
+					</div>
+    			</div>
+    		</nav>
+    		<div class="content">
+    			<div class="container-fluid">
+    				<div class="row">
+    					<div class="col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-date" style="background-color: #9c27b0;">
+    								<h4>WdatePicker时间插件</h4>
+    								<p>My97DatePicker</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">默认样式：</label>
+	   									<div class="col-xs-12 padding-no">
+								             <input type='text' class="form-control" id="wdatePicker"/>
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">自定义格式：</label>
+	   									<div class="col-xs-12 padding-no">
+								              <input type='text' class="form-control" id='wdatePicker1'/>
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">双月日历：</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type='text' class="form-control" id='wdatePicker2'/>
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">去除按钮：</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type='text' class="form-control" id='wdatePicker3'/>
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">时分秒：</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type='text' class="form-control" id='wdatePicker4'/>
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">星期：</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type='text' class="form-control" id='wdatePicker5'/>
+	   									</div>
+    								</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="http://www.my97.net/dp/demo/index.htm" target="_blank" style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-date" style="background-color: #9c27b0;">
+    								<h4>Bootstrap时间插件(常用参数)</h4>
+    								<p>bootstrap.datepicker</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-xs-12 padding-no markup">
+    									<div id="demo-dataTables-table_wrapper" class="dataTables_wrapper no-footer">
+											<table id="demo-dataTables-table" class="table">
+												<thead class="the-box dark full">
+													<tr>
+														<th class="sorting_disabled">属性</th>
+														<th class="sorting_disabled">类型</th>
+														<th class="sorting_disabled">默认值</th>
+														<th class="sorting_disabled">说明</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr><td colspan="4">静态属性:只能在WdatePicker.js中配置,一般情况下,不建议您修改静态属性的值</td></tr>
+													<tr><td>$wdate</td><td>bool</td><td>true</td><td>是否自动引入Wdate类 设置为true时,可直接在引入WdatePicker.js的页面里使用 class="Wdate" Wdate可在skin目录下的WdatePicker.css文件中定义<a>建议使用默认值</a></td></tr>
+													<tr><td>$dpPath</td><td>string</td><td>-</td><td>是否显示指定程序包的绝对位置,一般情况下为空即可(程序自动创建),该属性是为防止极其少数的情况下程序创建出错而设置的设置方法:如果,程序包所在http中的地址为 http://localhost/proName/My97DatePicker/则 $dpPath = '/proName/My97DatePicker/';<a>建议使用默认值</a></td></tr>
+													<tr><td>$crossFrame</td><td>bool</td><td>true</td><td>是否跨框架,一般设置为true即可,遇到跨域错误时可以将此功能关闭</td></tr>
+													<tr><td colspan="4">可配置属性:可以在WdatePicker方法是配置</td></tr>
+													<tr><td>el</td><td>Element 或  String</td><td>null</td><td>指定一个控件或控件的ID,必须具有value或innerHTML属性(如input,textarea,span,div,p等标签都可以),用户存储日期显示值(也就是dateFmt格式化后的值)</td></tr>
+													<tr><td>vel</td><td>Element 或  String</td><td>null</td><td>指定一个控件或控件的ID,必须具有value属性(如input),用于存储真实值(也就是realDateFmt和realTimeFmt格式化后的值)</td></tr>
+													<tr><td>doubleCalendar</td><td>bool</td><td>false</td><td>是否是双月模式,如果该属性为true,则弹出同时显示2个月的日期框</td></tr>
+													<tr><td>enableKeyboard</td><td>bool</td><td>true</td><td>键盘控制开关</td></tr>
+													<tr><td>enableInputMask</td><td>bool</td><td>true</td><td>文本框输入启用掩码开关</td></tr>
+													<tr><td>autoUpdateOnChanged</td><td>bool</td><td>null</td><td>在修改年月日时分秒等元素时,自动更新到el,默认是关闭的(即:需要点击确定或点击日期才更新);为false时 不自动更新;为true时 自动更新;为null时(默认值) 如果有日元素且不隐藏确定按钮时 为false,其他情况为true</td></tr>
+													<tr><td>weekMethod</td><td>string</td><td>ISO8601</td><td>周算法不同的地方有一些差异常见算法有两种1. ISO8601:规定第一个星期四为第一周,默认值2. MSExcel:1月1日所在的周</td></tr>
+													<tr><td>position</td><td>object</td><td>{}</td><td>日期选择框显示位置注意:坐标单位是px,是相对当前框架坐标(不受滚动条影响),默认情况下系统根据页面大小自动选择如:{left:100,top:50}表示固定坐标[100,50];{top:50}表示横坐标自动生成,纵坐标指定为 50;{left:100}表示纵坐标自动生成,横坐标指定为 100</td></tr>
+													<tr><td>lang</td><td>string</td><td>'auto'</td><td>当值为'auto'时 自动根据客户端浏览器的语言自动选择语言当值为 其他 时 从langList中选择对应的语言</td></tr>
+													<tr><td>skin</td><td>string</td><td>'default'</td><td>皮肤名称 默认自带 default和whyGreen两个皮肤另外如果你的css够强的话,可以自己做皮肤</td></tr>
+													<tr><td>dateFmt</td><td>string</td><td>'yyyy-MM-dd'</td><td>日期显示格式</td></tr>
+													<tr><td>realDateFmt</td><td>string</td><td>'yyyy-MM-dd'</td><td rowspan="3">计算机可识别的,真正的日期格式无效日期设置(disabledDates),最大日期(maxDate),最小日期(minDate)以及快速日期都必须与它们相匹配建议使用默认值</td></tr>
+													<tr><td>realTimeFmt</td><td>string</td><td>'HH:mm:ss'</td></tr>
+													<tr><td>realFullFmt</td><td>string</td><td>'%Date %Time'</td></tr>
+													<tr><td>minDate</td><td>string</td><td>'1900-01-01 00:00:00'</td><td>最小日期(注意要与上面的real日期相匹配)</td></tr>
+													<tr><td>maxDate</td><td>string</td><td>'2099-12-31 23:59:59'</td><td>最大日期(注意要与上面的real日期相匹配)</td></tr>
+													<tr><td>startDate</td><td>string</td>''<td></td><td>起始日期,既点击日期框时显示的起始日期为空时,使用今天作为起始日期(默认值)否则使用传入的日期作为起始日期(注意要与上面的real日期相匹配)</td></tr>
+													<tr><td>firstDayOfWeek</td><td>int</td><td>0</td><td>周的第一天 0表示星期日 1表示星期一</td></tr>
+													<tr><td>isShowWeek</td><td>bool</td><td>false</td><td>是否显示周</td></tr>
+													<tr><td>highLineWeekDay</td><td>bool</td><td>true</td><td>是否高亮显示 周六 周日</td></tr>
+													<tr><td>isShowClear</td><td>bool</td><td>true</td><td>是否显示清空按钮</td></tr>
+													<tr><td>isShowOK</td><td>bool</td><td>true</td><td>是否显示确定按钮</td></tr>
+													<tr><td>isShowToday</td><td>bool</td><td>true</td><td>是否显示今天按钮</td></tr>
+													<tr><td>isShowOthers</td><td>bool</td><td>true</td><td>为true时,第一行空白处显示上月的日期，末行空白处显示下月的日期,否则不显示</td></tr>
+													<tr><td>readOnly</td><td>bool</td><td>false</td><td>是否只读</td></tr>
+													<tr><td>errDealMode</td><td>int</td><td>0</td><td>纠错模式设置 可设置3中模式 0 - 提示 1 - 自动纠错 2 - 标记</td></tr>
+													<tr><td>autoPickDate</td><td>bool</td><td>null</td><td>为false时 点日期的时候不自动输入,而是要通过确定才能输入;为true时 即点击日期即可返回日期值;为null时(推荐使用) 如果有时间置为false 否则置为true</td></tr>
+													<tr><td>hmsMenuCfg</td><td>Object</td><td>{ H: [1, 6], m: [5, 6], s: [15, 4] }</td>
+													<td>4.8beta4新增：使用hmsMenuCfg属性可以实现时分秒菜单的自定义，时分秒自定义 H m s 分别代表时分秒：第一个参数表示步进,1表示0,1,2,3... 2表示0,2,4... 15表示0,15,30...；第二个参数表示每行显示值的数量；默认H [1, 6] 步进1 每行显示6个 共4行；默认m [5, 6] 步进5 每行显示6个 共2行；默认s [15, 4] 步进15 每行显示4个 共1行</td></tr>
+													<tr><td>qsEnabled</td><td>bool</td><td>true</td><td>是否启用快速选择功能。注意:当日期格式中没有d这个元素时(如yyyy-MM或HH:mm:ss这样的格式时),该属性永远为true</td></tr>
+													<tr><td>autoShowQS</td><td>bool</td><td>false</td><td>是否默认显示快速选择</td></tr>
+													<tr><td>quickSel</td><td>Array</td><td>null</td><td>快速选择数据,可以传入5个快速选择日期；注意:日期格式必须与 realDateFmt realTimeFmt realFullFmt 相匹配</td></tr>
+													<tr><td>disabledDays</td><td>Array</td><td>null</td><td>可以使用此功能禁用周日至周六所对应的日期0至6 分别代表 周日至周六</td></tr>
+													<tr><td>disabledDates</td><td>Array</td><td>null</td><td>可以使用此功能禁用所指定的一个或多个日期</td></tr>
+													<tr><td>opposite</td><td>bool</td><td>false</td><td>默认为false, 为true时,无效日期变成有效日期 ;注意:该属性对无效天特殊天不起作用</td></tr>
+													<tr><td>specialDates</td><td>Array</td><td>null</td><td>特殊日期,对指定的日期进行高亮显示</td></tr>
+													<tr><td>specialDays</td><td>Array</td><td>null</td><td>特殊天,使用此功能禁用周日至周六所对应的日期进行高亮显示0至6 分别代表 周日至周六</td></tr>
+												</tbody>
+											</table>
+										</div>
+										<h3>HTML</h3>
+										<pre><span class="nt">&lt;input id=</span><span class="s">&quot;wdatePicker&quot;</span><span class="nt"> type=</span><span class="s">&quot;text&quot;</span><span class="nt"> &gt;</span>
+    									</pre>
+    									<h3>JS</h3>
+    									<pre> $('#wdatePicker').click(function(){ WdatePicker();});</pre>
+   									</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="https://github.com/xdan/datetimepicker" target="_blank"  style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$("#navbar-collapse").load("sidebar.html");
+    		selectSidebar("sidebar-wdatePicker");
+		    $('#wdatePicker').click(function(){
+		 	    WdatePicker();
+		    });
+		    $('#wdatePicker1').click(function(){
+		 	    WdatePicker({
+		 	    	dateFmt:'yyyy-MM-dd  HH:mm:ss',
+		 	    });
+		    });
+		    $('#wdatePicker2').click(function(){
+		 	    WdatePicker({
+		 	    	dateFmt:'yyyy-MM-dd',
+		 	    	doubleCalendar:true,
+		 	    });
+		    });
+		    $('#wdatePicker3').click(function(){
+		 	    WdatePicker({
+		 	    	dateFmt:'yyyy-MM-dd',
+		 	    	isShowClear: false,
+		 	    	isShowToday: false,
+		 	    	isShowOK: false,
+		 	    });
+		    });
+		    $('#wdatePicker4').click(function(){
+		 	    WdatePicker({
+		 	    	dateFmt:'HH:mm:ss',
+		 	    	doubleCalendar:true,
+		 	    	skin:'whyGreen',
+		 	    });
+		    });
+		    $('#wdatePicker5').click(function(){
+		 	    WdatePicker({
+		 	    	dateFmt:'yyyy-MM-dd, DD',
+		 	    	doubleCalendar:true,
+		 	    	skin:'whyGreen',
+		 	    });
+		    });
+    	});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>material</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/bootstrap/build.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/fontawesome/font-awesome.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/style.css" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    	<div class="collapse navbar-collapse"  id="navbar-collapse"></div>
+    	<div class="main-panle">
+    		<nav class="navbar navbar-transparent navbar-absolute">
+    			<div class="container-fluid">
+    				<div class="navbar-header">
+						<button class="navbar-toggle" type="button" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">按钮配置</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<form class="navbar-from navbar-right">
+			  				<div class="form-group is-empty">
+			  					<input type="text" class="form-control" placeholder="Search">
+				   				<span class="material-input"></span>
+								<span class="material-input"></span>
+			  				</div>
+							<button type="button" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i>
+							</button>
+			  			</form>
+					</div>
+    			</div>
+    		</nav>
+    		<div class="content">
+    			<div class="container-fluid">
+    				<div class="row">
+    					<div class="col-md-6 col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-button" style="background-color: #9c27b0;">
+    								<h4>单选按钮</h4>
+    								<p>Bootstrap自带按钮样式</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">单选按钮：</label>
+    									<div class="col-xs-4 padding-no">
+					                        <div class="radio">
+						                        <input id="radio1" class="styled" value="Default" name="radio" type="radio">
+						                        <label for="radio1">
+						                            Default
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-4 padding-no">
+    										 <div class="radio radio-primary">
+						                        <input id="radio2" class="styled" value="Primary" name="radio" type="radio" checked>
+						                        <label for="radio2">
+						                            Primary
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-4 padding-no">
+    										 <div class="radio radio-success">
+						                        <input id="radio3" class="styled" value="Success" name="radio" type="radio">
+						                        <label for="radio3">
+						                            Success
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-4 padding-no">
+    										<div class="radio radio-info">
+						                        <input id="radio4" class="styled" value="Info" name="radio" type="radio">
+						                        <label for="radio4">
+						                            Info
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-4 padding-no">
+    										<div class="radio radio-warning">
+						                        <input id="radio5" type="radio" value="Warning" name="radio" class="styled">
+						                        <label for="radio5">
+						                            Warning
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-4 padding-no">
+    										<div class="radio radio-danger">
+						                        <input id="radio6" type="radio" value="Danger" name="radio" class="styled">
+						                        <label for="radio6">
+						                            Danger
+						                        </label>
+						                    </div>
+    									</div>
+    								</div>
+    								<div class="col-xs-12 padding-no highlight">
+    									<pre>
+    										<code class="html">
+    											<span class="nt"><</span><span class="nt">div</span><span class="nt"> class=</span><span class="s">"radio radio-default"</span><span class="nt">></span>
+    											<span class="nt">&nbsp;&nbsp;&nbsp;<</span><span class="nt">input</span><span class="na"> type=</span><span class="s">"radio"</span><span class="na"> name=</span><span class="s">"radio"</span><span class="na"> class=</span><span class="s">"styled"</span><span class="nt">></span>
+    											<span class="nt">&nbsp;&nbsp;&nbsp;<</span><span class="nt">label></span><span class="nt"></span>Default<span><</span><span class="nt">/label></span>
+    											<span class="nt"><</span><span class="nt">/div></span>
+    										</code>
+    									</pre>
+    								</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="#pablo" style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-md-6 col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-button" style="background-color: #9c27b0;">
+    								<h4>多选按钮</h4>
+    								<p>Bootstrap自带按钮样式</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">多选按钮：</label>
+    									<div class="col-xs-3 padding-no">
+					                        <div class="checkbox">
+						                        <input id="checkbox7" class="styled" value="Default" type="checkbox" checked>
+						                        <label for="checkbox7">
+						                            Default
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-3 padding-no">
+    										 <div class="checkbox checkbox-primary">
+						                        <input id="checkbox8" class="styled" value="Primary" type="checkbox" checked>
+						                        <label for="checkbox8">
+						                            Primary
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-3 padding-no">
+    										 <div class="checkbox checkbox-success">
+						                        <input id="checkbox9" class="styled" value="Success" type="checkbox" checked>
+						                        <label for="checkbox9">
+						                            Success
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-3 padding-no">
+    										<div class="checkbox checkbox-info">
+						                        <input id="checkbox10" class="styled" value="Info" type="checkbox" checked>
+						                        <label for="checkbox10">
+						                            Info
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-3 padding-no">
+    										<div class="checkbox checkbox-warning">
+						                        <input id="checkbox11" type="checkbox" value="Warning" class="styled" checked>
+						                        <label for="checkbox11">
+						                            Warning
+						                        </label>
+						                    </div>
+    									</div>
+    									<div class="col-xs-3 padding-no">
+    										<div class="checkbox checkbox-danger">
+						                        <input id="checkbox12" type="checkbox" value="Danger" class="styled" checked>
+						                        <label for="checkbox12">
+						                            Danger
+						                        </label>
+						                    </div>
+    									</div>
+    								</div>
+    								<div class="col-xs-12 padding-no highlight">
+    									<pre>
+    										<code class="html">
+    											<span class="nt"><</span><span class="nt">div</span><span class="nt"> class=</span><span class="s">"checkbox checkbox-default"</span><span class="nt">></span>
+    											<span class="nt">&nbsp;&nbsp;&nbsp;<</span><span class="nt">input</span><span class="na"> type=</span><span class="s">"checkbox"</span><span class="na"> name=</span><span class="s">"checkbox"</span><span class="na"> class=</span><span class="s">"styled"</span><span class="nt">></span>
+    											<span class="nt">&nbsp;&nbsp;&nbsp;<</span><span class="nt">label></span><span class="nt"></span>Default<span><</span><span class="nt">/label></span>
+    											<span class="nt"><</span><span class="nt">/div></span>
+    										</code>
+    									</pre>
+    								</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="#pablo" style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-md-6 col-sm-12">
+    						<div class="col-content">
+    							<div class="card">
+	    							<div class="card-header card-button" style="background-color: #9c27b0;">
+	    								<h4>普通按钮</h4>
+	    								<p>Bootstrap自带按钮样式</p>
+	    							</div>
+	    							<div class="card-content">
+	    								<div class="col-xs-12 padding-no">
+	    									<label class="col-sm-12 control-label padding-no">普通按钮：</label>
+	    									<div class="col-xs-4 padding-no">
+	    										<button type="button" class="btn btn-default">Default</button>
+	    									</div>
+	    									<div class="col-xs-4 padding-no">
+	    										<button type="button" class="btn btn-primary">Primary</button>
+	    									</div>
+	    									<div class="col-xs-4 padding-no">
+	    										<button type="button" class="btn btn-success">Success</button>
+	    									</div>
+	    									<div class="col-xs-4 padding-no">
+	    										<button type="button" class="btn btn-info">Info</button>
+	    									</div>
+	    									<div class="col-xs-4 padding-no">
+	    										<button type="button" class="btn btn-warning">Warning</button>
+	    									</div>
+	    									<div class="col-xs-4 padding-no">
+	    										<button type="button" class="btn btn-danger">Danger</button>
+	    									</div>
+	    								</div>
+	    								<div class="col-xs-12 padding-no highlight">
+	    									<pre>
+	    										<code class="html">
+	    											<span class="nt"><</span><span class="nt">button</span><span class="na"> type=</span><span class="s">"button"</span><span class="na"> class=</span><span class="s">"btn btn-default"</span><span class="nt">></span>Default<span class="nt"><</span><span class="nt">/button></span>
+	    											<span class="nt"><</span><span class="nt">button</span><span class="na"> type=</span><span class="s">"button"</span><span class="na"> class=</span><span class="s">"btn btn-primary"</span><span class="nt">></span>Primary<span class="nt"><</span><span class="nt">/button></span>
+	    											<span class="nt"><</span><span class="nt">button</span><span class="na"> type=</span><span class="s">"button"</span><span class="na"> class=</span><span class="s">"btn btn-success"</span><span class="nt">></span>Success<span class="nt"><</span><span class="nt">/button></span>
+	    											<span class="nt"><</span><span class="nt">button</span><span class="na"> type=</span><span class="s">"button"</span><span class="na"> class=</span><span class="s">"btn btn-info"</span><span class="nt">></span>Info<span class="nt"><</span><span class="nt">/button></span>
+	    											<span class="nt"><</span><span class="nt">button</span><span class="na"> type=</span><span class="s">"button"</span><span class="na"> class=</span><span class="s">"btn btn-warning"</span><span class="nt">></span>Warning<span class="nt"><</span><span class="nt">/button></span>
+	    											<span class="nt"><</span><span class="nt">button</span><span class="na"> type=</span><span class="s">"button"</span><span class="na"> class=</span><span class="s">"btn btn-danger"</span><span class="nt">></span>Danger<span class="nt"><</span><span class="nt">/button></span>
+	    										</code>
+	    									</pre>
+	    								</div>
+	    								
+	    							</div>
+	    							<div class="card-footer">
+	    								<div class="stats">
+											<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+											<a href="#pablo" style="color: #9c27b0;">Get More Info...</a>
+										</div>
+	    							</div>
+	    						</div>
+    						</div>
+    					</div>
+    					<div class="col-md-6 col-sm-12">
+    						<div class="col-content">
+    							<div class="card">
+	    							<div class="card-header card-button" style="background-color: #9c27b0;">
+	    								<h4>常用js</h4>
+	    								<p>js操作单选多选</p>
+	    							</div>
+	    							<div class="card-content">
+	    								<div class="col-xs-12 padding-no markup">
+		    								<pre>
+		    										$("input:radio").prop("checked",true);//设置单选选中
+		    										$("input:radio:checked").val();//获取选中的值
+		    										$("input:checkbox").prop("checked",false);//全不选
+										    		$("input:checkbox").prop("checked",true);//全选
+										    		$("input:checkbox").each(function(){
+										    		&nbsp;&nbsp;&nbsp;if($(this).val() == "Default"){
+										    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).prop("checked",true);
+										    		&nbsp;&nbsp;&nbsp;}
+										    		})
+	    									</pre>
+    									</div>
+	    							</div>
+	    							<div class="card-footer">
+	    								<div class="stats">
+											<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+											<a href="#pablo" style="color: #9c27b0;">Get More Info...</a>
+										</div>
+	    							</div>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript" src="js/jquery/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/icheck/icheck.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		selectSidebar("sidebar-bootstrapButton");
+    	});
+    </script>
+  </body>
+</html>

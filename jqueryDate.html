@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>material</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/fontawesome/font-awesome.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/dataTables/dataTables.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/jquery/jquery.datetimepicker.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/style.css" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    	<div class="collapse navbar-collapse"  id="navbar-collapse"></div>
+    	<div class="main-panle">
+    		<nav class="navbar navbar-transparent navbar-absolute">
+    			<div class="container-fluid">
+    				<div class="navbar-header">
+						<button class="navbar-toggle" type="button" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">时间插件</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<form class="navbar-from navbar-right">
+			  				<div class="form-group is-empty">
+			  					<input type="text" class="form-control" placeholder="Search">
+				   				<span class="material-input"></span>
+								<span class="material-input"></span>
+			  				</div>
+							<button type="button" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i>
+							</button>
+			  			</form>
+					</div>
+    			</div>
+    		</nav>
+    		<div class="content">
+    			<div class="container-fluid">
+    				<div class="row">
+    					<div class="col-md-12 col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-date" style="background-color: #9c27b0;">
+    								<h4>jquery时间插件</h4>
+    								<p>jquery.datetimepicker</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-md-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">默认样式：</label>
+    									<div class="col-xs-12 padding-no">
+    										<input type="text" class="form-control" id="datetimepicker">
+    									</div>
+    								</div>
+    								<div class="col-md-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">中文样式：</label>
+    									<div class="col-xs-12 padding-no">
+    										<input type="text" class="form-control" id="datetimepicker1">
+    									</div>
+    								</div>
+    								<div class="col-md-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">时间间隔：</label>
+    									<div class="col-xs-12 padding-no">
+    										<input type="text" class="form-control" id="datetimepicker2">
+    									</div>
+    								</div>
+    								<div class="col-md-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">切换主题：</label>
+    									<div class="col-xs-12 padding-no">
+    										<input type="text" class="form-control" id="datetimepicker3">
+    									</div>
+    								</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="https://github.com/xdan/datetimepicker" target="_blank"  style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-date" style="background-color: #9c27b0;">
+    								<h4>jquery时间插件(常用参数)</h4>
+    								<p>jquery.datetimepicker</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-xs-12 padding-no markup">
+    									<div id="demo-dataTables-table_wrapper" class="dataTables_wrapper no-footer">
+											<table id="demo-dataTables-table" class="table">
+												<thead class="the-box dark full">
+													<tr>
+														<th class="sorting_disabled">名称</th>
+														<th class="sorting_disabled">默认值</th>
+														<th class="sorting_disabled">描述</th>
+														<th class="sorting_disabled">例子</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr><td>value</td><td>null</td><td>设置值</td><td>{value:'12.03.2013', format:'d.m.Y'}</td></tr>
+													<tr><td>lang</td><td>en</td><td>设置样式显示语言，中文：ch\zh\zh-TW</td><td>{lang:'zh'}</td></tr>
+													<tr><td>format</td><td>Y/m/d H:i</td><td>日期格式</td><td>{format:'Y/m/d'}</td></tr>
+													<tr><td>timepicker</td><td>true</td><td>显示时间选择部分</td><td>{timepicker:false}</td></tr>
+													<tr><td>datepicker</td><td>true</td><td>显示日期选择部分</td><td>{datepicker:false}</td></tr>
+													<tr><td>weeks</td><td>false</td><td>显示周数</td><td>{weeks:true}</td></tr>
+													<tr><td>theme</td><td>'default'</td><td>皮肤样式</td><td>{theme:'dark'}</td></tr>
+													<tr><td>minDate</td><td>false</td><td>设置可选择的最小日期（只有日期格式不包含时间部分才效）</td><td>{minDate:0}//今天{minDate:'2013/12/03'}{minDate:'-1970/01/02'}//昨天</td></tr>
+													<tr><td>maxDate</td><td>false</td><td>-</td><td>{maxDate:0}</td></tr>
+													<tr><td>minTime</td><td>false</td><td>-</td><td>{minTime:0}{minTime:'12:00'}</td></tr>
+													<tr><td>allowTimes</td><td>[]</td><td>可供选择的时间点</td><td>{allowTimes:['09:00', '11:00', '12:00', '21:00']}</td></tr>
+													<tr><td>mask</td><td>false</td><td>-</td><td>{mask:'9999/19/39',format:'Y/m/d'}{mask:true,format:'Y/m/d'}</td></tr>
+													<tr><td>yearOffset</td><td>0</td><td>默认年分偏移值</td><td>｛yearOffset:1}</td></tr>
+													<tr><td>inline</td><td>false</td><td>是否直接显示日历控件</td><td>-</td></tr>
+													<tr><td>todayButton</td><td>true</td><td>是否显示"跳转至今天“的按钮</td><td>-</td></tr>
+													<tr><td>defaultSelect</td><td>true</td><td>当input为空时，高亮显示现在的日期或时间</td><td>-</td></tr>
+													<tr><td>validateOnBlur</td><td>true</td><td>当控件失去焦点时，验证其值，如果没选择有效日期，则设置为现在的日期。</td><td>-</td></tr>
+													<tr><td>allowBlank</td><td>false</td><td>是否允许设为空，即使validateOnBlur设置true，一样有效</td><td>-</td></tr>
+													<tr><td>onSelectDate</td><td>function(current_time,$input){}</td><td>-</td><td>onSelectDate:function(ct,$i){alert(ct.dateFormat('d/m/Y'))}</td></tr>
+													<tr><td>onSelectTime</td><td>function(current_time,$input){}</td><td>-</td><td>onSelectDate:function(ct,$i){alert(ct.dateFormat('H:i'))}</td></tr>
+													<tr><td>onShow</td><td>function(current_time,$input){}</td><td>-</td><td>-</td></tr>
+													<tr><td>hours12</td><td>false</td><td>12小时制</td><td>-</td></tr>
+													<tr><td>yearStart</td><td>1950</td><td>可选择的最小年份</td><td>-</td></tr>
+													<tr><td>yearEnd</td><td>2050</td><td>可选择的最大年份</td><td>-</td></tr>
+													<tr><td>roundTime</td><td>round</td><td>针对timepicker,可选择值: round, ceil, floor</td><td>-</td></tr>
+													<tr><td>dayOfWeekStart</td><td>0</td><td>-</td><td>-</td></tr>
+													<tr><td>disabledDates</td><td>[]</td><td>-</td><td>disabledDates: ['01.01.2014','02.01.2014'], formatDate:'d.m.Y'}</td></tr>
+													<tr><td>allowDates</td><td>[]</td><td>-</td><td>-</td></tr>
+													<tr><td>allowDateRe</td><td>-</td><td>使用正则表达式</td><td>{format:'Y-m-d',allowDateRe:'\d{4}-(03-31|06-30|09-30|12-31)' }</td></tr>
+												</tbody>
+											</table>
+										</div>
+										<h3>HTML</h3>
+										<pre><span class="nt">&lt;input id=</span><span class="s">&quot;datetimepicker&quot;</span><span class="nt"> type=</span><span class="s">&quot;text&quot;</span><span class="nt"> &gt;</span>
+    									</pre>
+    									<h3>JS</h3>
+    									<pre>$('#datetimepicker').datetimepicker({lang:'ch'});</pre>
+   									</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="https://github.com/xdan/datetimepicker" target="_blank"  style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.datetimepicker.full.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$("#navbar-collapse").load("sidebar.html");
+    		selectSidebar("sidebar-jqueryDate");
+    		$("#datetimepicker").datetimepicker();
+    		$('#datetimepicker1').datetimepicker({
+				lang:'ch',
+				format:'d/m/Y',
+				step: 10,
+				formatDate:'Y/m/d',
+				timepicker: false
+			});
+			$('#datetimepicker2').datetimepicker({
+				lang:'ch',
+				step: 10,
+			});
+			$('#datetimepicker3').datetimepicker({
+				lang:'ch',
+				theme: 'dark',
+			});
+    	});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>material</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/fontawesome/font-awesome.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-datepicker.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/dataTables/dataTables.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/style.css" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    	<div class="collapse navbar-collapse"  id="navbar-collapse"></div>
+    	<div class="main-panle">
+    		<nav class="navbar navbar-transparent navbar-absolute">
+    			<div class="container-fluid">
+    				<div class="navbar-header">
+						<button class="navbar-toggle" type="button" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">时间插件</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<form class="navbar-from navbar-right">
+			  				<div class="form-group is-empty">
+			  					<input type="text" class="form-control" placeholder="Search">
+				   				<span class="material-input"></span>
+								<span class="material-input"></span>
+			  				</div>
+							<button type="button" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i>
+							</button>
+			  			</form>
+					</div>
+    			</div>
+    		</nav>
+    		<div class="content">
+    			<div class="container-fluid">
+    				<div class="row">
+    					<div class="col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-date" style="background-color: #9c27b0;">
+    								<h4>Bootstrap时间插件</h4>
+    								<p>bootstrap-datepicker</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">默认样式：</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type="text" id="datepicker" class="form-control">
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">中文样式：</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type="text" id="datepicker1" class="form-control">
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">高亮样式：</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type="text" id="datepicker2" class="form-control">
+	   									</div>
+    								</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="https://github.com/uxsolutions/bootstrap-datepicker" target="_blank" style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-date" style="background-color: #9c27b0;">
+    								<h4>Bootstrap时间插件(常用参数)</h4>
+    								<p>bootstrap.datepicker</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-xs-12 padding-no markup">
+    									<div id="demo-dataTables-table_wrapper" class="dataTables_wrapper no-footer">
+											<table id="demo-dataTables-table" class="table">
+												<thead class="the-box dark full">
+													<tr>
+														<th class="sorting_disabled">名称</th>
+														<th class="sorting_disabled">默认值</th>
+														<th class="sorting_disabled">描述</th>
+														<th class="sorting_disabled">例子</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr><td>autoclose</td><td>false</td><td>当选择一个日期之后是否立即关闭此日期时间选择器。</td><td>-</td></tr>
+													<tr><td>calendarWeeks</td><td>false</td><td>每周是否显示左边的数字</td><td>-</td></tr>
+													<tr><td>clearBtn</td><td>false</td><td>设为“true”,在日期选择器底部将显示一个“清除”按钮底，清空输入值。如果“autoclose”也设置为true,该按钮将关闭日期选择器</td><td>-</td></tr>
+													<tr><td>language</td><td>en</td><td>设置显示语言</td><td>中文显示：{language: "zh-CN"}</td></tr>
+													<tr><td>endDate</td><td>-</td><td>结束时间</td><td>-</td></tr>
+													<tr><td>forceParse</td><td>true</td><td>当选择器关闭的时候，是否强制解析输入框中的值。也就是说，当用户在输入框中输入了不正确的日期，选择器将会尽量解析输入的值，并将解析后的正确值按照给定的格式format设置到输入框中</td><td>-</td></tr>
+													<tr><td>format</td><td>'mm/dd/yyyy'</td><td>日期显示格式</td><td>{format: "yyyy-mm-dd"}</td></tr>
+													<tr><td>multidate</td><td>false</td><td>日期多选</td><td>-</td></tr>
+													<tr><td>startDate</td><td>-</td><td>开始时间</td><td>-</td></tr>
+													<tr><td>todayBtn</td><td>false</td><td>显示一个“今日”的按钮</td><td>-</td></tr>
+													<tr><td>todayHighlight</td><td>false</td><td>当前日期高亮</td><td>-</td></tr>
+													<tr><td>weekStart</td><td>0</td><td>星期开始。0(周日)到6(周六)</td><td></td></tr>
+												</tbody>
+											</table>
+										</div>
+										<h3>HTML</h3>
+										<pre><span class="nt">&lt;input id=</span><span class="s">&quot;datepicker&quot;</span><span class="nt"> type=</span><span class="s">&quot;text&quot;</span><span class="nt"> &gt;</span>
+    									</pre>
+    									<h3>JS</h3>
+    									<pre>$('#datepicker').datepicker({language: "zh-CN",});</pre>
+   									</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="https://github.com/xdan/datetimepicker" target="_blank"  style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$("#navbar-collapse").load("sidebar.html");
+    		selectSidebar("sidebar-bootstrapDate");
+			$('#datepicker').datepicker();
+			$('#datepicker1').datepicker({
+				language: "zh-CN",
+			});
+			$('#datepicker2').datepicker({
+				language: "zh-CN",
+				todayHighlight: true,
+				todayBtn: true,
+				format: "yyyy-mm-dd"
+			});
+    	});
+    </script>
+  </body>
+</html>

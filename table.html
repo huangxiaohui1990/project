@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>material</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/fontawesome/font-awesome.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/dataTables/dataTables.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/dataTables/select.bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/style.css" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    	<div class="collapse navbar-collapse"  id="navbar-collapse"></div>
+    	<div class="main-panle">
+    		<nav class="navbar navbar-transparent navbar-absolute">
+    			<div class="container-fluid">
+    				<div class="navbar-header">
+						<button class="navbar-toggle" type="button" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">表格插件</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<form class="navbar-from navbar-right">
+			  				<div class="form-group is-empty">
+			  					<input type="text" class="form-control" placeholder="Search">
+				   				<span class="material-input"></span>
+								<span class="material-input"></span>
+			  				</div>
+							<button type="button" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i>
+							</button>
+			  			</form>
+					</div>
+    			</div>
+    		</nav>
+    		<div class="content">
+    			<div class="container-fluid">
+    				<div class="row">
+    					<div class="col-md-12 col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-date" style="background-color: #9c27b0;">
+    								<h4>DataTables</h4>
+    								<p>Datatables是一款jquery表格插件。它是一个高度灵活的工具，可以将任何HTML表格添加高级的交互功能</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-sm-12 col-xs-12 padding-no">
+    									<div id="demo-dataTables-table_wrapper" class="dataTables_wrapper no-footer">
+											<table id="demo-dataTables-table" class="table">
+												<thead class="the-box dark full">
+													<tr>
+														<th class="sorting_disabled">
+															<input id="mr-checkAll" type="checkbox">
+															<label for="mr-checkAll"></label>
+														</th>
+														<th class="sorting_disabled">姓名</th>
+														<th class="sorting_disabled">年龄</th>
+														<th class="sorting_disabled">住址</th>
+														<th class="sorting_disabled">性别</th>
+														<th class="sorting_disabled" style="text-align: center;">操作</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+    								</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="https://github.com/xdan/datetimepicker" target="_blank"  style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/jquery/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$("#navbar-collapse").load("sidebar.html");
+    		setTimeout("$('.li-table').addClass('active');",300);
+    		initDatatablesData();
+    		selectAll("demo-dataTables-table");
+    	});
+    	function initDatatablesData(){
+	    	$("#demo-dataTables-table").dataTable().fnDestroy();
+	    	$("#demo-dataTables-table").dataTable($.extend(true,{}, tableOpions, {
+	        "sAjaxSource": "json/table.json",
+	        "fnServerData": retrieveData, //与后台交互获取数据的处理函数
+	        "select": {
+	            style: 'multi',
+	            selector: 'td:first-child'
+	        },
+	        "aoColumns" :  [
+	         	 {
+	                orderable: false,
+	                className: 'select-checkbox',
+	                targets: 0
+	             }, { 
+		            "mData": "name",
+		            "mRender": function (data, type, row) {
+		               if(data) {
+		                    return data;
+		                }else {
+		                    return '--';
+		                }
+		            },
+		        },{
+		            "mData": "age",
+		            "mRender": function (data, type, row) {
+		                if(data) {
+		                    return data;
+		                }else {
+		                    return '--';
+		                }
+		            },
+		        },{
+		            "mData": "address",
+		            "mRender": function (data, type, row) {
+		                if(data) {
+		                    return data;
+		                }else {
+		                    return '--';
+		                }
+		            },
+		        },  {
+		            "mData": "sex",
+		            "mRender": function (data, type, row) {
+		               if(data) {
+		                    return data;
+		                }else {
+		                    return '--';
+		                }
+		            },
+		            /* 'fnCreatedCell': function (nTd) {
+		                $(nTd).css('text-align', 'center');
+		            } */
+		        },  {
+		            "mData": "name",
+		            "mRender": operateRender,
+		            'fnCreatedCell': function (nTd) {
+		                $(nTd).css('text-align', 'center');
+		            }
+		        } 
+	        ],
+	    }));
+    }
+   //异步获取table数据
+   function retrieveData(sSource, aoData, fnCallback) {
+       var row; //默认一次加载10条
+       var start; //从第几条开始
+       $.each(eval(aoData), function (i, field) {//转换为json对象
+           if (field.name == "iDisplayStart") {
+               start = field.value;
+           }
+           if (field.name == "iDisplayLength") {
+               row = field.value;
+           }
+       });
+
+       var query = {
+           page: conversionPages(start,row),
+           rows: row,
+       };
+       $.getJSON(sSource, query, function (rm) {
+           if(rm.code == 200) {
+               var data = rm.result.pageInfo;
+               data.iTotalRecords = rm.result.pageInfo.total;
+               data.iTotalDisplayRecords = rm.result.pageInfo.total;
+               fnCallback(data);
+           } else {
+               toastr.error(rm.msg);
+           }
+       });
+   }
+   // 操作列渲染
+   function operateRender(data, type, row) {
+       var str =  '<a id="'+ data + '"><span class="glyphicon glyphicon-list-alt" title="详情"></span></a>&nbsp;&nbsp;';
+       return str;
+   }
+    </script>
+  </body>
+</html>

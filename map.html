@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>material</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/fontawesome/font-awesome.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/dataTables/dataTables.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/dataTables/select.bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/style.css" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style type="text/css">
+		#allmap{height:500px;width:500px;}
+		.optionpanel{margin: 10px;}
+		dl,dt,dd,ul,li{
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		dt{
+			font-size:14px;
+			font-family:"微软雅黑";
+			font-weight:bold;
+			border-bottom:1px dotted #000;
+			padding:5px 0 5px 5px;
+			margin:5px 0;
+		}
+		dd{
+			padding:5px 0 0 5px;
+		}
+		li{
+			line-height:28px;
+		}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=QR2lWCWhqOVZc7upAPFiuE3QMuxmdSPD"></script>
+	<script type="text/javascript" src="js/jquery/jquery.dataTables.min.js"></script>
+</head>
+<body>
+	<div id="allmap"></div>
+	<script type="text/javascript">
+		var sContent =
+	"<h4 style='margin:0 0 5px 0;padding:0.2em 0'>天安门</h4>" + 
+	"<img style='float:right;margin:4px' id='imgDemo' src='http://app.baidu.com/map/images/tiananmen.jpg' width='139' height='104' title='天安门'/>" + 
+	"<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>天安门坐落在中国北京市中心,故宫的南侧,与天安门广场隔长安街相望,是清朝皇城的大门...</p>" + 
+	"</div>";
+		var map = new BMap.Map("allmap");
+		var point = new BMap.Point(121.5278,31.084442);
+	
+		/* map.addControl(new BMap.NavigationControl());               // 添加平移缩放控件
+		map.addControl(new BMap.ScaleControl());                    // 添加比例尺控件
+		map.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
+		map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
+		map.disable3DBuilding(); */
+		map.centerAndZoom(point, 18);
+	    var marker = new BMap.Marker(point); //创建marker对象
+	    marker.enableDragging(); //marker可拖拽
+	    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+	    map.addOverlay(marker); //在地图中添加marker
+		map.enableScrollWheelZoom(true);
+		/* var stCtrl = new BMap.PanoramaControl(); //构造全景控件
+		stCtrl.setOffset(new BMap.Size(0, 0));
+		map.addControl(stCtrl);//添加全景控件 */
+		setTimeout("console.log(map.getCenter());",2000);
+	</script>
+</body>
+</html>
+

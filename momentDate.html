@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>material</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/fontawesome/font-awesome.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-datepicker.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/jquery/jquery.datetimepicker.min.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/style.css" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    	<div class="collapse navbar-collapse"  id="navbar-collapse"></div>
+    	<div class="main-panle">
+    		<nav class="navbar navbar-transparent navbar-absolute">
+    			<div class="container-fluid">
+    				<div class="navbar-header">
+						<button class="navbar-toggle" type="button" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">时间插件</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<form class="navbar-from navbar-right">
+			  				<div class="form-group is-empty">
+			  					<input type="text" class="form-control" placeholder="Search">
+				   				<span class="material-input"></span>
+								<span class="material-input"></span>
+			  				</div>
+							<button type="button" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i>
+							</button>
+			  			</form>
+					</div>
+    			</div>
+    		</nav>
+    		<div class="content">
+    			<div class="container-fluid">
+    				<div class="row">
+    					<div class="col-md-6 col-sm-12">
+    						<div class="card">
+    							<div class="card-header card-date" style="background-color: #9c27b0;">
+    								<h4>日期转换插件</h4>
+    								<p>moment</p>
+    							</div>
+    							<div class="card-content">
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">格式化日期：</label>
+	   									<div class="col-xs-12 padding-no">
+								             <input type='text' class="form-control" id="moment"/>
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">相对时间：</label>
+	   									<div class="col-xs-12 padding-no">
+								              <input type='text' class="form-control" id='moment1'/>
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">日历时间：</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type='text' class="form-control" id='moment2'/>
+	   									</div>
+    								</div>
+    								<div class="col-sm-6 col-xs-12 padding-no">
+    									<label class="col-sm-12 control-label padding-no">计算差值：(一个月前与现在时间差)</label>
+	   									<div class="col-xs-12 padding-no">
+	   										<input type='text' class="form-control" id='moment3'/>
+	   									</div>
+    								</div>
+    							</div>
+    							<div class="card-footer">
+    								<div class="stats">
+										<i class="material-icons text-danger" style="color: #f44336;">notifications</i>
+										<a href="http://momentjs.cn/" target="_blank" style="color: #9c27b0;">Get More Info...</a>
+									</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.datetimepicker.full.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="js/moment/moment.min.js"></script>
+    <script type="text/javascript" src="js/moment/zh-cn.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$("#navbar-collapse").load("sidebar.html");
+    		selectSidebar("sidebar-moment");
+		    setInterval("$('#moment').val(moment().format('YYYY-MM-DD hh:mm:ss dddd'))",1000);
+		    $('#moment1').val(moment().startOf('day').fromNow()+","+moment().startOf('hour').fromNow()+","+moment("20111031", "YYYYMMDD").fromNow());
+		    $('#moment2').val(moment().subtract(10, 'days').calendar()+","+moment().add(10, 'month').calendar());
+		    $('#moment3').val(moment().diff(moment().subtract(1, 'months'),"hours")+"小时,"+moment().diff(moment().subtract(1, 'months'),"seconds")+"秒");
+    	});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+{
+    "code": 200,
+    "msg": "success",
+    "result": {
+        "pageInfo": {
+            "pageNum": 1,
+            "pageSize": 10,
+            "size": 7,
+            "total": 7,
+            "pages": 1,
+            "list": [
+                {
+                    "name": "赵一",
+                    "age": "20",
+                    "sex": "男",
+                    "address": "上海市闵行区"
+                },
+                {
+                    "name": "王二",
+                    "age": "20",
+                    "sex": "男",
+                    "address": "上海市闵行区"
+                },
+                {
+                    "name": "张三",
+                    "age": "20",
+                    "sex": "男",
+                    "address": "上海市闵行区"
+                },
+                {
+                    "name": "李四",
+                    "age": "20",
+                    "sex": "男",
+                    "address": "上海市闵行区"
+                },
+                {
+                    "name": "李思",
+                    "age": "20",
+                    "sex": "女",
+                    "address": "上海市闵行区"
+                },
+                {
+                    "name": "刘思",
+                    "age": "20",
+                    "sex": "女",
+                    "address": "上海市闵行区"
+                },
+                {
+                    "name": "赵甜",
+                    "age": "20",
+                    "sex": "女",
+                    "address": "上海市闵行区"
+                }
+            ]
+        }
+    }
+}
